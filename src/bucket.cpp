@@ -17,10 +17,10 @@ Bucket::Bucket(const double& reMax, const Domain& domain, const size_t& particle
     this->length = reMax;
     this->domain = domain;
 
-    this->numX = (int) (domain.xLength / length) + 3;
-    this->numY = (int) (domain.yLength / length) + 3;
-    this->numZ = (int) (domain.zLength / length) + 3;
-    this->num  = numX * numY * numZ;
+    this->numX = (int) (domain.xLength / length) + 3;  //bucket number in X direction
+    this->numY = (int) (domain.yLength / length) + 3;  //bucket number in Y direction
+    this->numZ = (int) (domain.zLength / length) + 3;  //bucket number in Z direction
+    this->num  = numX * numY * numZ;                   //Number of buckets
 
     this->first.resize(num);
     this->last.resize(num);
